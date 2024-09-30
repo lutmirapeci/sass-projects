@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.contact {
+  @extend %section;
+  background-color: var.$background-color-tertiary;
+
+  .inner {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .icons-content {
+      flex-basis: 50%;
+      text-align: center;
+
+      p {
+        font-weight: bold;
+      }
+
+      .social-icons {
+        i {
+          margin-right: math.div(var.$gutter-base, 2);
+          color: var.$background-color-primary;
+          cursor: pointer;
+          font-size: 30px;
+        }
+      }
+    }
+
+    .form-content {
+      flex-basis: 50%;
+
+      form {
+        .half-width-inputs {
+          width: 100%;
+          display: flex;
+          margin-bottom: math.div(var.$gutter-base, 3);
+          justify-content: space-between;
+
+          input {
+            flex-basis: 49%;
+            padding: math.div(var.$gutter-base, 3);
+            margin-bottom: 10px;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            background-color: transparent;
+
+            &:focus {
+              outline: none;
+              border-bottom-color: #333;
+            }
+          }
+
+          @media (max-width: 768px) {
+            display: block;
+
+            input {
+              flex-basis: 100%;
+              width: 100%;
+            }
+          }
+        }
+
+        textarea {
+          display: block;
+          width: 100%;
+          margin-bottom: math.div(var.$gutter-base, 3);
+          border: none;
+          padding: math.div(var.$gutter-base, 3);
+          background-color: transparent;
+          border: 2px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+          text-align: center;
+          button {
+            width: 100%;
+            display: block;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}

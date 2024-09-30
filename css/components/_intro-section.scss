@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use 'sass:math';
+
+.intro-section {
+    color: var.$text-color-primary;
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.8)), url("../images/image-01.jpg") center/cover no-repeat;
+    padding-top: var.$gutter-base * 2;
+    text-align: center;
+
+    .inner {
+        @extend %wrap;
+        @extend %section;
+
+        form {
+            display: flex;
+            justify-content: center;
+            input {
+                flex-basis: 50%;
+                border: none;
+                padding: math.div(var.$gutter-base, 3);
+                border-top-left-radius: var.$border-radius;
+                border-bottom-left-radius: var.$border-radius;
+
+                @media (max-width: 768px) {
+                    flex-basis: 100%;
+                }
+            }
+
+            button {
+                border: none;
+                background-color: var.$background-color-secondary;
+                border-top-right-radius: var.$border-radius;
+                border-bottom-right-radius: var.$border-radius;
+                color: var.$text-color-primary;
+            }
+        }
+    }
+}

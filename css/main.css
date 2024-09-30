@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.9375rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+@media (max-width: 425px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+@media (max-width: 425px) {
+  h2 {
+    font-size: 1.5625rem;
+  }
+}
+
+h3 {
+  font-size: 1.5625rem;
+}
+@media (max-width: 425px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 0.625rem;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+.btn:hover {
+  border-color: #e81919;
+  cursor: pointer;
+}
+
+.contact, .services, .text-block-with-icon, .intro-section .inner {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+@media (max-width: 768px) {
+  .contact, .services, .text-block-with-icon, .intro-section .inner {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+}
+
+.services .inner, .text-block-with-icon .inner, .intro-section .inner, .menu .inner {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 999px) {
+  .services .inner, .text-block-with-icon .inner, .intro-section .inner, .menu .inner {
+    width: 100%;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0e0e0e;
+  padding: 0.9375rem;
+  color: #fff;
+}
+.menu .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .inner .hamburger-menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .menu .inner .hamburger-menu {
+    display: block;
+  }
+}
+.menu .inner ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+.menu .inner ul li {
+  margin-left: 8px;
+}
+@media (max-width: 768px) {
+  .menu .inner ul {
+    display: none;
+  }
+}
+.menu .inner a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.intro-section {
+  color: #fff;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../images/image-01.jpg") center/cover no-repeat;
+  padding-top: 3.75rem;
+  text-align: center;
+}
+.intro-section .inner form {
+  display: flex;
+  justify-content: center;
+}
+.intro-section .inner form input {
+  flex-basis: 50%;
+  border: none;
+  padding: 0.625rem;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+@media (max-width: 768px) {
+  .intro-section .inner form input {
+    flex-basis: 100%;
+  }
+}
+.intro-section .inner form button {
+  border: none;
+  background-color: #e81919;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #fff;
+}
+
+.text-block-with-icon .reversed {
+  flex-direction: row-reverse;
+}
+.text-block-with-icon .inner {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .text-block-with-icon .inner {
+    flex-direction: column;
+  }
+}
+.text-block-with-icon .inner .content-box {
+  flex-basis: 70%;
+}
+.text-block-with-icon .inner .content-box .lighter-text {
+  color: #696969;
+}
+@media (max-width: 425px) {
+  .text-block-with-icon .inner .content-box button {
+    width: 100%;
+  }
+}
+.text-block-with-icon .inner .icon-box {
+  flex-basis: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.text-block-with-icon .inner .icon-box i {
+  color: #f4511e;
+}
+
+.parent-reversed {
+  background-color: #eee;
+}
+
+.services .inner .title {
+  text-align: center;
+}
+.services .inner .cards-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services .inner .cards-cont .card {
+  flex-basis: 33.333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9375rem;
+}
+.services .inner .cards-cont .card i {
+  color: #f4511e;
+  margin-bottom: 0.46875rem;
+}
+.services .inner .cards-cont .card p {
+  color: #696969;
+}
+@media (max-width: 768px) {
+  .services .inner .cards-cont .card {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 425px) {
+  .services .inner .cards-cont .card {
+    flex-basis: 100%;
+  }
+}
+
+.contact {
+  background-color: #eee;
+}
+.contact .inner {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .contact .inner {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+.contact .inner .icons-content {
+  flex-basis: 50%;
+  text-align: center;
+}
+.contact .inner .icons-content p {
+  font-weight: bold;
+}
+.contact .inner .icons-content .social-icons i {
+  margin-right: 0.9375rem;
+  color: #f4511e;
+  cursor: pointer;
+  font-size: 30px;
+}
+.contact .inner .form-content {
+  flex-basis: 50%;
+}
+.contact .inner .form-content form .half-width-inputs {
+  width: 100%;
+  display: flex;
+  margin-bottom: 0.625rem;
+  justify-content: space-between;
+}
+.contact .inner .form-content form .half-width-inputs input {
+  flex-basis: 49%;
+  padding: 0.625rem;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  background-color: transparent;
+}
+.contact .inner .form-content form .half-width-inputs input:focus {
+  outline: none;
+  border-bottom-color: #333;
+}
+@media (max-width: 768px) {
+  .contact .inner .form-content form .half-width-inputs {
+    display: block;
+  }
+  .contact .inner .form-content form .half-width-inputs input {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+.contact .inner .form-content form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.625rem;
+  border: none;
+  padding: 0.625rem;
+  background-color: transparent;
+  border: 2px solid #ddd;
+}
+@media (max-width: 768px) {
+  .contact .inner .form-content form {
+    text-align: center;
+  }
+  .contact .inner .form-content form button {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+footer {
+  padding: 1.875rem;
+  background-color: #0e0e0e;
+  color: #fff;
+}
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

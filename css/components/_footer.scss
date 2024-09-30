@@ -1,0 +1,13 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+footer {
+  padding: var.$gutter-base;
+  background-color: var.$background-color-dark;
+  color: var.$text-color-primary;
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
