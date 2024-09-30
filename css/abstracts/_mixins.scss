@@ -1,0 +1,100 @@
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+// RESPONSIVE LAPTOP FIRST DESIGN MIXINS
+@mixin four-k-styles {
+  @media (max-width: 2560px) {
+    @content;
+  }
+}
+
+@mixin laptop-l-styles {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin laptop-m-styles {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-styles {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile-l-styles {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin mobile-m-styles {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobile-s-styles {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+%section {
+  padding-top: (var.$gutter-base * 2.5);
+  padding-bottom: (var.$gutter-base * 2.5);
+
+  @include mobile-l-styles {
+    padding-top: (var.$gutter-base);
+    padding-bottom: (var.$gutter-base);
+  }
+}
+
+%wrap {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mobile-l-styles {
+    width: 100%;
+    padding-left: math.div(var.$gutter-base, 2);
+    padding-right: math.div(var.$gutter-base, 2);
+    padding-top: math.div(var.$gutter-base, 2);
+  }
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%background {
+  background-image: url(../images/image-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%rounded-box {
+  background-color: var.$background-color-base;
+  box-shadow: 0px 4px 8px var.$shadow-effect;
+}
+
+%media-info-tag {
+  position: absolute;
+  top: 10%;
+  left: 88%;
+  transform: translate(-50%, -50%);
+  padding: calc(var.$gutter-base / 5);
+  border-radius: var.$border-radius-l;
+}

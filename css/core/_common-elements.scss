@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: 1.2;
+}
+
+h1 {
+  font-size: var.$font-size-xlarge;
+  @media (max-width: 425px) {
+    font-size: var.$font-size-large;
+    margin-top: 175px;
+  }
+}
+
+h2 {
+  font-size: var.$font-size-large;
+  @media (max-width: 425px) {
+    font-size: var.$font-size-medium;
+  }
+}
+
+h3 {
+  font-size: var.$font-size-medium;
+  @media (max-width: 425px) {
+    font-size: var.$font-size-small;
+  }
+}
+
+p {
+  font-size: var.$font-size-medium;
+  @media (max-width: 425px) {
+    font-size: var.$font-size-small;
+  }
+  color: var.$text-color-base;
+}
+
+button {
+  border: none;
+  background-color: var.$background-color-primary;
+  border-radius: var.$border-radius-sm;
+  color: var.$text-color-secondary;
+  padding: calc(var.$gutter-base / 2.5);
+  font-size: var.$font-size-medium;
+
+  @media (max-width: 425px) {
+    font-size: var.$font-size-small;
+  }
+
+  &:hover {
+    transition: 0.4s;
+    background-color: transparent;
+    border: 1px solid var.$background-color-primary;
+    color: var.$background-color-primary;
+    cursor: pointer;
+  }
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: var.$font-weight-base;
+  color: var.$text-color-secondary;
+}
+
+span {
+  font-size: var.$font-size-xs;
+}
